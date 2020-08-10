@@ -1,0 +1,89 @@
+.bookContainer{
+    min-height: 100vh;
+    background-color: var(--primary);
+    display: flex;
+    flex-direction: column;
+    font-family: 'Nunito', sans-serif;
+    padding-bottom: 1.2rem;
+}
+
+.bookContainer .image{
+    overflow: hidden;
+    height: 50vh;
+    margin-top: 55px;
+    display: flex;
+    align-items: baseline;
+    position: relative;
+}
+.bookContainer .image img{
+    width: 100%;
+    filter: brightness(.3);
+}
+.bookContainer .image h1{
+    position: absolute;
+    color: #eee;
+    top: 20%;
+    text-align: center;
+    font-size: 2.8rem;
+    width: 100%;
+}
+.bookContainer .content{
+    width: 98%;
+    height: auto;
+    margin: -5rem auto 0 auto;
+    z-index: 70;
+    background-color: var(--primary);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.bookContainer .content .highlights{
+    border-bottom: 1px solid var(--border);
+    flex: .3;
+    text-align: center;
+}
+.bookContainer .content .highlights .seats{
+    width: 100%;
+    justify-content: center;
+    margin: 3rem 0;
+    display: flex;
+    align-items: center;
+}
+.bookContainer .content .highlights span{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: var(--border);
+    padding: 1rem;
+}
+.bookContainer .content .highlights span p{
+    display: flex;
+    align-items: center;
+    margin: 0 1rem;
+}
+.bookContainer .content .bookDetails{
+    flex: .7;
+    padding: 1.2rem;
+    line-height: 1.7;
+}
+.bookContainer .content .bookDetails span{
+    color: var(--primaryText);
+}
+
+@media screen and ( min-width: 60em ){
+    .bookContainer .image h1{
+        top: 40%;
+        font-size: 4rem;
+    }
+    .bookContainer .content{
+        width: 80%;
+        flex-direction: row;
+        margin: -4rem auto 0 auto;
+    }
+    .bookContainer .content .highlights {
+        border: transparent;
+        border-right: 1px solid var(--border);
+    }
+}

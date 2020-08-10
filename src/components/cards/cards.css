@@ -1,0 +1,71 @@
+.card-container{
+    background-color: var(--primary);
+    height: calc(100vh - 55px);
+    margin-top: 55px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(19em, 1fr));
+    grid-gap: 2rem;
+    padding: 1.2em;font-family: 'Nunito', sans-serif;
+}
+.playcard{
+    color: #eee;
+    height: 20rem;
+    border: 1px solid var(--border);
+    border-radius: .4rem;
+    position: relative;
+    overflow: hidden;
+    transition: all ease-in .3s;
+}
+.playcard:hover{
+    box-shadow: 20px 20px 60px var(--border);
+}
+.playcard img{
+    width: 100%;
+    height: 100%;   
+    filter: brightness(.4);
+}
+.playcard .maintext{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 14px;
+    z-index: 100;
+}
+.bookingIcon{
+    position: absolute;
+    bottom: 1rem;
+    left: calc(50% - 28px);
+    z-index: 110;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: #666;
+    display: flex;
+    justify-content: center;
+    padding-top: .8rem;
+    font-size: 1.8rem;
+    transition: transform ease-in .1s;
+}
+.bookingIcon:hover{
+    transform: scale(1.1);
+}
+.card-bottom-sect{
+    color: #111;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between ;
+    padding: 14px;
+    font-size: .8rem;
+    background-color: var(--primary);
+}
+.card-bottom-sect span{
+    display: flex;
+    align-items: center;
+}
+.card-bottom-sect span p{
+    margin-left: .2rem;
+}

@@ -1,0 +1,73 @@
+.dashboard-header{
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+    top: 0em;
+    height: 55px;
+    font-size: 1.3rem;
+    padding: 0 1.2em;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 1px 25px -10px var(--secondary);
+    background-color: var(--primary);
+}
+.dashboard-header h1{
+    font-size: 1.3rem;
+}
+.dashboard-header h1 span{
+    font-size: 1rem;
+    color: #888;
+}
+.menuBtn{
+    display: none;
+}
+.menuBtn-label{
+    cursor: pointer;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menuBtn-label .menuicon{
+    cursor: pointer;
+    position: relative;
+    width: 25px;
+    height: 3px;
+    background: black;
+    transition: background 0.1s ease-out;
+    display: flex;
+}
+.menuBtn-label .menuicon::before,
+.menuBtn-label .menuicon::after{
+    position: absolute;
+    right: 0;
+    content: '';
+    width: 22px;
+    height: 3px;
+    background: black;
+    transition: transform 0.2s ease-out;
+}
+.menuBtn-label .menuicon::before{
+    top: -7px;
+}
+.menuBtn-label .menuicon::after{
+    top: 7px;
+}
+.dashboard-header .menuBtn:checked ~ .menuBtn-label .menuicon{
+    background: transparent;
+}
+
+.dashboard-header .menuBtn:checked ~ .menuBtn-label .menuicon::before{
+    transform: rotate(-45deg);
+}
+
+.dashboard-header .menuBtn:checked ~ .menuBtn-label .menuicon::after{
+    transform: rotate(45deg);
+}
+
+.dashboard-header .menuBtn:checked ~ .menuBtn-label:not(.class) .menuicon::before,
+.dashboard-header .menuBtn:checked ~ .menuBtn-label:not(.class) .menuicon::after{
+    top: 0;
+}
